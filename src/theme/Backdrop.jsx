@@ -1,4 +1,4 @@
-// Fixed layer behind the whole page. Styled in theme.css under .backdrop.
+// Column rules are drawn by .backdrop::before in theme.css.
 export default function Backdrop() {
   return null
 }
