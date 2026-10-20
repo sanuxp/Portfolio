@@ -1,1 +1,11 @@
-/* Theme-specific decoration goes here. The neutral base has none. */
+/* Nordic: slow floating shapes. */
+.backdrop { background: radial-gradient(ellipse 50% 40% at 10% 100%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 70%); }
+.tilt { box-shadow: 0 10px 30px -18px color-mix(in srgb, var(--accent) 40%, transparent); }
+
+.shapes { position: relative; width: 100%; aspect-ratio: 1; }
+.shapes i { position: absolute; border-radius: 50%; animation: float 9s ease-in-out infinite alternate; }
+.shapes .s1 { width: 70%; height: 70%; left: 0; top: 0; background: var(--shape-1); }
+.shapes .s2 { width: 58%; height: 58%; right: 0; bottom: 10%; background: var(--shape-2); opacity: .75; animation-delay: -3s; }
+.shapes .s3 { width: 32%; height: 32%; left: 12%; bottom: 0; background: var(--shape-3); animation-delay: -6s; }
+.shapes .s4 { width: 14%; height: 14%; right: 18%; top: 6%; background: var(--accent); animation-delay: -2s; }
+@keyframes float { to { transform: translate(8px, -14px); } }

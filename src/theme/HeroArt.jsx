@@ -1,4 +1,7 @@
-// Decorative graphic on the right of the hero. Hidden from assistive tech.
 export default function HeroArt() {
-  return null
+  return (
+    <div className="shapes">
+      <i className="s1" /><i className="s2" /><i className="s3" /><i className="s4" />
+    </div>
+  )
 }

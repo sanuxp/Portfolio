@@ -1,39 +1,44 @@
-/* Theme tokens. Every colour and shape in the site comes from these variables.
-   A theme is this file, theme.css, Backdrop.jsx, HeroArt.jsx and the font link in index.html. */
+/* Nordic: muted sage, soft rounded shapes. */
 :root {
-  --radius: 16px;
-  --btn-radius: 10px;
+  --radius: 24px;
+  --btn-radius: 999px;
   --bw: 1px;
   --card-shadow: none;
   --maxw: 1040px;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-head: var(--font-sans);
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
-  --head-weight: 700;
-  --head-ls: -0.02em;
+  --head-weight: 600;
+  --head-ls: -0.03em;
 }
 
 :root,
 :root[data-theme="dark"] {
-  --bg: #0e1116;
-  --surface: #151a21;
-  --line: #262d38;
-  --text: #e6e9ef;
-  --muted: #98a2b3;
-  --accent: #6ea8fe;
-  --accent-2: #a78bfa;
-  --accent-ink: #0b1220;
+  --bg: #0f1715;
+  --surface: #16201d;
+  --line: #1f2e29;
+  --text: #e6efeb;
+  --muted: #9db3aa;
+  --accent: #7fc4a8;
+  --accent-2: #a8d8c4;
+  --accent-ink: #0f1715;
+  --shape-1: #1c2a26;
+  --shape-2: #2f5a4b;
+  --shape-3: #243a33;
   color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  --bg: #f7f8fa;
+  --bg: #eef3f1;
   --surface: #ffffff;
-  --line: #dde2ea;
-  --text: #14181f;
-  --muted: #5a6577;
-  --accent: #2563eb;
-  --accent-2: #7c3aed;
+  --line: #d5e2dc;
+  --text: #14221e;
+  --muted: #5b746b;
+  --accent: #3f8a70;
+  --accent-2: #2f6f58;
   --accent-ink: #ffffff;
+  --shape-1: #d9e5e0;
+  --shape-2: #9fd1bc;
+  --shape-3: #bbd8cb;
   color-scheme: light;
 }
