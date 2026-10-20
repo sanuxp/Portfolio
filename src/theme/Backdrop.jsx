@@ -1,4 +1,4 @@
-// Fixed layer behind the whole page. Styled in theme.css under .backdrop.
+// Editorial has no backdrop; the page stays plain paper.
 export default function Backdrop() {
   return null
 }
