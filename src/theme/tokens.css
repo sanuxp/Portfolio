@@ -1,39 +1,42 @@
-/* Theme tokens. Every colour and shape in the site comes from these variables.
-   A theme is this file, theme.css, Backdrop.jsx, HeroArt.jsx and the font link in index.html. */
+/* Amber CRT: single-colour monitor on dark, paper terminal on light. */
 :root {
-  --radius: 16px;
-  --btn-radius: 10px;
+  --radius: 4px;
+  --btn-radius: 2px;
   --bw: 1px;
   --card-shadow: none;
   --maxw: 1040px;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-head: var(--font-sans);
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+  --font-head: var(--font-mono);
   --head-weight: 700;
-  --head-ls: -0.02em;
+  --head-ls: -0.04em;
 }
 
 :root,
 :root[data-theme="dark"] {
-  --bg: #0e1116;
-  --surface: #151a21;
-  --line: #262d38;
-  --text: #e6e9ef;
-  --muted: #98a2b3;
-  --accent: #6ea8fe;
-  --accent-2: #a78bfa;
-  --accent-ink: #0b1220;
+  --bg: #0b0700;
+  --surface: #130d00;
+  --line: #2a1d00;
+  --text: #ffd27a;
+  --muted: #b88a2e;
+  --accent: #ffb000;
+  --accent-2: #ffd27a;
+  --accent-ink: #0b0700;
+  --scan: rgba(0, 0, 0, 0.32);
+  --glow: rgba(255, 176, 0, 0.35);
   color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  --bg: #f7f8fa;
-  --surface: #ffffff;
-  --line: #dde2ea;
-  --text: #14181f;
-  --muted: #5a6577;
-  --accent: #2563eb;
-  --accent-2: #7c3aed;
+  --bg: #fbf3dc;
+  --surface: #fff9e8;
+  --line: #e3d3a5;
+  --text: #2b1d00;
+  --muted: #7a5a12;
+  --accent: #b26a00;
+  --accent-2: #8a5200;
   --accent-ink: #ffffff;
+  --scan: rgba(138, 106, 32, 0.07);
+  --glow: transparent;
   color-scheme: light;
 }

@@ -1,1 +1,18 @@
-/* Theme-specific decoration goes here. The neutral base has none. */
+/* Amber CRT: scanlines, glow and a blinking prompt. */
+h1 { font-size: clamp(2rem, 4.6vw, 3.3rem); max-width: 20ch; }
+h1, .logo { text-shadow: 0 0 14px var(--glow); }
+body::after { content: ""; position: fixed; inset: 0; z-index: 50; pointer-events: none; background: repeating-linear-gradient(0deg, var(--scan) 0 1px, transparent 1px 4px); animation: flicker 4s steps(2) infinite; }
+@keyframes flicker { 50% { opacity: .93; } }
+.backdrop { background: radial-gradient(ellipse at 50% 40%, transparent 55%, color-mix(in srgb, var(--bg) 70%, #000) 130%); }
+
+.crt { border: var(--bw) solid var(--accent); border-radius: var(--radius); padding: 16px 18px; font-family: var(--font-mono); font-size: 13px; background: color-mix(in srgb, var(--surface) 90%, transparent); box-shadow: 0 0 24px -8px var(--glow); }
+.crt div { white-space: nowrap; overflow: hidden; width: 0; color: var(--muted); animation: type calc(var(--n) * 45ms) steps(var(--n)) forwards; animation-delay: calc(var(--i) * 1s + .5s); line-height: 1.9; }
+.crt div.ok { color: var(--accent); }
+.crt-cursor { display: inline-block; width: .6em; height: 1.1em; vertical-align: text-bottom; background: var(--accent); animation: blink 1s steps(2) infinite; }
+@keyframes type { to { width: calc(var(--n) * 1ch); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .crt div { width: auto; }
+}
+
+:root[data-theme="light"] .backdrop { background: none; }
