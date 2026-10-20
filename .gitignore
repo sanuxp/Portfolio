@@ -1,0 +1,12 @@
+node_modules
+dist
+.vite
+*.log
+.DS_Store
+.env
+.env.*
+.claude
+
+# Private: contact details, job-search notes, salary and privacy rules. Never publish.
+sanu_profile.md
+resumes/
