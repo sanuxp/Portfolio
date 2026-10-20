@@ -1,8 +1,7 @@
-/* Theme tokens. Every colour and shape in the site comes from these variables.
-   A theme is this file, theme.css, Backdrop.jsx, HeroArt.jsx and the font link in index.html. */
+/* Aurora: violet and teal glows, frosted-glass surfaces. */
 :root {
-  --radius: 16px;
-  --btn-radius: 10px;
+  --radius: 20px;
+  --btn-radius: 14px;
   --bw: 1px;
   --card-shadow: none;
   --maxw: 1040px;
@@ -10,30 +9,36 @@
   --font-head: var(--font-sans);
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
   --head-weight: 700;
-  --head-ls: -0.02em;
+  --head-ls: -0.03em;
 }
 
 :root,
 :root[data-theme="dark"] {
-  --bg: #0e1116;
-  --surface: #151a21;
-  --line: #262d38;
-  --text: #e6e9ef;
-  --muted: #98a2b3;
-  --accent: #6ea8fe;
-  --accent-2: #a78bfa;
-  --accent-ink: #0b1220;
+  --bg: #0c0b1a;
+  --surface: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.14);
+  --text: #edebff;
+  --muted: #a9a4d4;
+  --accent: #8b7cff;
+  --accent-2: #19c6b0;
+  --accent-ink: #0c0b1a;
+  --blob-1: #7c5cff;
+  --blob-2: #19c6b0;
+  --blob-3: #d04bd8;
   color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  --bg: #f7f8fa;
-  --surface: #ffffff;
-  --line: #dde2ea;
-  --text: #14181f;
-  --muted: #5a6577;
-  --accent: #2563eb;
-  --accent-2: #7c3aed;
+  --bg: #f5f3ff;
+  --surface: rgba(255, 255, 255, 0.62);
+  --line: rgba(120, 100, 200, 0.2);
+  --text: #1b1740;
+  --muted: #625c94;
+  --accent: #6d4df2;
+  --accent-2: #14a897;
   --accent-ink: #ffffff;
+  --blob-1: #b9a8ff;
+  --blob-2: #8fe3d6;
+  --blob-3: #f3b1ef;
   color-scheme: light;
 }

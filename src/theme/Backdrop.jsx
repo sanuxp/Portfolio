@@ -1,4 +1,9 @@
-// Fixed layer behind the whole page. Styled in theme.css under .backdrop.
 export default function Backdrop() {
-  return null
+  return (
+    <>
+      <div className="blob b1" />
+      <div className="blob b2" />
+      <div className="blob b3" />
+    </>
+  )
 }
