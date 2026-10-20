@@ -1,1 +1,20 @@
-/* Theme-specific decoration goes here. The neutral base has none. */
+/* Signal: dotted grid backdrop and an animated terminal window. */
+.backdrop {
+  background-image: radial-gradient(color-mix(in srgb, var(--text) 14%, transparent) 1px, transparent 1.2px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at 70% 30%, #000 10%, transparent 75%);
+}
+
+.term { border: var(--bw) solid var(--line); border-radius: var(--radius); background: color-mix(in srgb, var(--surface) 92%, transparent); overflow: hidden; font-family: var(--font-mono); font-size: 13px; box-shadow: 0 20px 50px -20px color-mix(in srgb, var(--accent) 35%, transparent); }
+.term-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: var(--bw) solid var(--line); color: var(--muted); font-size: 12px; }
+.term-bar i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+.term-bar span { margin-left: 8px; }
+.term-body { padding: 16px 16px 18px; display: grid; gap: 8px; }
+.term-line { width: 0; overflow: hidden; white-space: nowrap; color: var(--muted); animation: type calc(var(--n) * 45ms) steps(var(--n)) forwards; animation-delay: calc(var(--i) * 1s + .6s); }
+.term-line.ok { color: var(--accent); }
+.term-cursor { display: inline-block; width: .6em; height: 1.1em; vertical-align: text-bottom; background: var(--accent); animation: blink 1s steps(2) infinite; }
+@keyframes type { to { width: calc(var(--n) * 1ch); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .term-line { width: auto; }
+}
