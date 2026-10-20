@@ -1,1 +1,7 @@
-/* Theme-specific decoration goes here. The neutral base has none. */
+/* Waveform: sound bars in the hero and a soft glow behind the page. */
+.backdrop { background: radial-gradient(ellipse 60% 50% at 80% 25%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%); }
+
+.wave { display: flex; align-items: center; justify-content: space-between; height: 260px; }
+.wave i { width: 7px; height: calc(var(--h) * 1%); border-radius: 4px; background: var(--muted); opacity: .5; transform-origin: center; animation: bar 1.8s ease-in-out infinite; animation-delay: calc(var(--i) * -0.19s); }
+.wave i.hot { background: var(--accent); opacity: 1; }
+@keyframes bar { 50% { transform: scaleY(.4); } }

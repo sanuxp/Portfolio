@@ -1,4 +1,4 @@
-// Fixed layer behind the whole page. Styled in theme.css under .backdrop.
+// The glow is drawn by .backdrop in theme.css.
 export default function Backdrop() {
   return null
 }

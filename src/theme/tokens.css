@@ -1,5 +1,4 @@
-/* Theme tokens. Every colour and shape in the site comes from these variables.
-   A theme is this file, theme.css, Backdrop.jsx, HeroArt.jsx and the font link in index.html. */
+/* Waveform: deep navy with coral, soft sky with coral on light. */
 :root {
   --radius: 16px;
   --btn-radius: 10px;
@@ -10,30 +9,30 @@
   --font-head: var(--font-sans);
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
   --head-weight: 700;
-  --head-ls: -0.02em;
+  --head-ls: -0.03em;
 }
 
 :root,
 :root[data-theme="dark"] {
-  --bg: #0e1116;
-  --surface: #151a21;
-  --line: #262d38;
-  --text: #e6e9ef;
-  --muted: #98a2b3;
-  --accent: #6ea8fe;
-  --accent-2: #a78bfa;
-  --accent-ink: #0b1220;
+  --bg: #0b1020;
+  --surface: #121a33;
+  --line: #1e2848;
+  --text: #e8ecfa;
+  --muted: #97a1c4;
+  --accent: #ff6b5e;
+  --accent-2: #ffb86b;
+  --accent-ink: #1a0a08;
   color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  --bg: #f7f8fa;
+  --bg: #f2f5fc;
   --surface: #ffffff;
-  --line: #dde2ea;
-  --text: #14181f;
-  --muted: #5a6577;
-  --accent: #2563eb;
-  --accent-2: #7c3aed;
+  --line: #d6ddf0;
+  --text: #101733;
+  --muted: #5a6488;
+  --accent: #e5483b;
+  --accent-2: #f08a24;
   --accent-ink: #ffffff;
   color-scheme: light;
 }
