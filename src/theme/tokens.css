@@ -1,0 +1,39 @@
+/* Theme tokens. Every colour and shape in the site comes from these variables.
+   A theme is this file, theme.css, Backdrop.jsx, HeroArt.jsx and the font link in index.html. */
+:root {
+  --radius: 16px;
+  --btn-radius: 10px;
+  --bw: 1px;
+  --card-shadow: none;
+  --maxw: 1040px;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-head: var(--font-sans);
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+  --head-weight: 700;
+  --head-ls: -0.02em;
+}
+
+:root,
+:root[data-theme="dark"] {
+  --bg: #0e1116;
+  --surface: #151a21;
+  --line: #262d38;
+  --text: #e6e9ef;
+  --muted: #98a2b3;
+  --accent: #6ea8fe;
+  --accent-2: #a78bfa;
+  --accent-ink: #0b1220;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --line: #dde2ea;
+  --text: #14181f;
+  --muted: #5a6577;
+  --accent: #2563eb;
+  --accent-2: #7c3aed;
+  --accent-ink: #ffffff;
+  color-scheme: light;
+}

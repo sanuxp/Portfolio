@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { nav } from '../data.js'
+import ThemeToggle from './ui/ThemeToggle.jsx'
 
 const NAME = 'SANU KUMAR'
 
@@ -31,7 +32,8 @@ export default function Nav() {
           <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
         ))}
       </nav>
-      <button className="icon-btn" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open} aria-controls="menu">
+      <ThemeToggle />
+      <button className="icon-btn burger" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open} aria-controls="menu">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
       </button>
     </header>

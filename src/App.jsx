@@ -1,12 +1,11 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import Projects from './components/Projects.jsx'
 import Experience from './components/Experience.jsx'
 import Skills from './components/Skills.jsx'
 import Contact from './components/Contact.jsx'
-
-const Scene = lazy(() => import('./components/Scene.jsx'))
+import Backdrop from './theme/Backdrop.jsx'
 
 export default function App() {
   const [progress, setProgress] = useState(0)
@@ -25,9 +24,7 @@ export default function App() {
     <>
       <a className="skip" href="#main">Skip to content</a>
       <div className="progress" style={{ transform: `scaleX(${progress})` }} aria-hidden="true" />
-      <Suspense fallback={null}>
-        <Scene />
-      </Suspense>
+      <div className="backdrop" aria-hidden="true"><Backdrop /></div>
       <Nav />
       <main id="main">
         <Hero />

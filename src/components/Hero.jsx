@@ -1,6 +1,7 @@
 import React from 'react'
 import { contact } from '../data.js'
 import ExtLink from './ui/ExtLink.jsx'
+import HeroArt from '../theme/HeroArt.jsx'
 
 // Buttons in the hero reuse the first two profiles (GitHub, LinkedIn) from the contact data.
 const heroLinks = [
@@ -24,6 +25,7 @@ export default function Hero() {
         ))}
       </div>
       <div className="scroll-hint mono" aria-hidden="true"><i /> scroll</div>
+      <div className="hero-art" aria-hidden="true"><HeroArt /></div>
     </section>
   )
 }
