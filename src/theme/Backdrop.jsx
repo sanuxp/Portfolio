@@ -1,4 +1,4 @@
-// Fixed layer behind the whole page. Styled in theme.css under .backdrop.
+// Brutalist keeps the page flat: no backdrop.
 export default function Backdrop() {
   return null
 }
