@@ -1,1 +1,23 @@
-/* Theme-specific decoration goes here. The neutral base has none. */
+/* Blueprint: graph-paper grid and a drawn flow diagram. */
+.backdrop {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--line) 80%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--line) 80%, transparent) 1px, transparent 1px),
+    linear-gradient(color-mix(in srgb, var(--line) 40%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--line) 40%, transparent) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  mask-image: linear-gradient(#000 40%, transparent 100%);
+}
+
+.bp { width: 100%; height: auto; overflow: visible; font-family: var(--font-mono); }
+.bp-node { fill: var(--bg); stroke: var(--accent); stroke-width: 1.6; }
+.bp-node.alt { stroke: var(--accent-2); }
+.bp-dot { fill: var(--text); }
+.bp-label { fill: var(--text); font-size: 11px; }
+.bp-note { fill: var(--muted); font-size: 9.5px; }
+.bp-link { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-dasharray: 160; stroke-dashoffset: 160; animation: draw 1.2s ease forwards; animation-delay: calc(var(--i) * .8s + .4s); }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .bp-link { stroke-dashoffset: 0; }
+}
